@@ -27,7 +27,7 @@ public class NewBehaviourScript : MonoBehaviour
       horizontalInput = Input.GetAxis("Horizontal");
        
 
-       /*
+       
        
        // flip player when moving left/right
        
@@ -35,13 +35,12 @@ public class NewBehaviourScript : MonoBehaviour
        {
            transform.localScale = Vector3.one;
        }
-
         else if (horizontalInput < -0.01f)
         {
             transform.localScale = new Vector3(-1, 1, 1);
         }
 
-       */
+       
        
        //Wall jump
 
@@ -96,12 +95,7 @@ public class NewBehaviourScript : MonoBehaviour
        }                                                                                // 2 is the power the player gets pushed away and 6 is the power that pushes up
 
    }
-
-   private void OnCollisionEnter2D(Collision2D collision)
-   {
-        
-   }
-
+   
    private bool isGrounded()
    {
        RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, Vector2.down,
@@ -119,4 +113,11 @@ public class NewBehaviourScript : MonoBehaviour
 
        return raycastHit.collider != null;
    }
+
+   public bool canAttack()
+   {
+       return horizontalInput == 0 && isGrounded() && !onWall();        // define when the player is able to attack
+                                                                        // is able to attack if he is not moving left or right,if he is grounded and not on a wall
+   }
+
 }
