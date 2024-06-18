@@ -1,0 +1,27 @@
+Menu
+- Das Spiel wird in der MainMenuScene starten
+- über Play Button gelant man zur level selection
+-> LevelMenu.cs
+
+Level 1 / Level 2
+- durch drücken von Esc wird das Pausenmenü geöffnet
+- mit W/s oder Pfeiltaste hoch/runter kann zwischen Restart/Resume und Menu gewechselt werden
+- mit Enter oder E kann die ausgewählte option ausgeführt werden
+-> UiManager.cs und SelectionYorn.cs
+
+PlayerMovement
+- Spieler kann mit A/D nach links und rechts laufen
+- Mit Space kann der Spieler hüpfen
+- Mit Space und A/D kann der Spieler an Wänden hochklettern
+- Linke Maustaste drücken um ein Projectile zu schießen, NUR beim Stillstehen
+- Projectile wird verschwinden sobald etwas getroffen wird
+-> PlayerMovement.cs, Health.cs
+
+Enemy
+- wird der Gegner berührt verliert der Spieler
+- Gegner kann besiegt werden, indem ihn 3 projectiles treffen
+-> Health.cs, Enemy.cs
+
+Camera
+- Camera wird den Spieler in den jeweiligen Raum folgen
+-> CameraController.cs, Door.cs

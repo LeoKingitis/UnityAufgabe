@@ -2,6 +2,7 @@
 using System;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NewBehaviourScript : MonoBehaviour
 {
@@ -13,7 +14,9 @@ public class NewBehaviourScript : MonoBehaviour
    [SerializeField] private LayerMask wallLayer;
    private float wallJumpCooldown;
    private float horizontalInput;
-   
+
+
+  
    
    private void Awake()
    {
@@ -120,4 +123,5 @@ public class NewBehaviourScript : MonoBehaviour
                                                                         // is able to attack if he is not moving left or right,if he is grounded and not on a wall
    }
 
+   
 }

@@ -9,6 +9,10 @@ public class UiManager : MonoBehaviour
     [Header("Pause")]
     [SerializeField] private GameObject pauseScreen;
     
+    
+
+    
+    
     private void Awake()
     {
         gameOverScreen.SetActive(false);
@@ -18,6 +22,7 @@ public class UiManager : MonoBehaviour
     {
         gameOverScreen.SetActive(true);
         pauseScreen.SetActive(false);
+        
     }
 
     public void Restart()
@@ -61,4 +66,5 @@ public class UiManager : MonoBehaviour
         }
         
     }
+    
 }
