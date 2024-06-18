@@ -32,7 +32,12 @@ public class Projectile : MonoBehaviour
     {
         hit = true;                         //if projectile hits something it will vanish
         boxCollider.enabled = false;        
-        Deactivate();   
+        Deactivate();
+
+        if (collision.tag == "Enemy")
+        {
+            collision.GetComponent<Health>().TakeDamage(1);
+        }
     }
 
     public void SetDirection(float _direction)      //tell the projectile to go left or right
